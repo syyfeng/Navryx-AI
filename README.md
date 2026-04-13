@@ -45,10 +45,10 @@ Ollama runs at `http://localhost:11434` by default. GastroGlobe will auto-detect
 cd client && npm install
 cd ../server && npm install
 
-# 2. Configure environment (optional — edit server/.env)
+# 2. Configure environment (optional — create server/.env from the example)
 #    Set OPENAI_API_KEY if you have one, or leave blank for Ollama
 cd ../server
-cp .env .env.local  # optional, .env works fine
+cp .env.example .env   # then edit .env if needed
 
 # 3. Start both services (in separate terminals)
 
@@ -107,7 +107,8 @@ GastroGlobe/
 │   │   ├── chat.js               # POST /api/chat — conversational AI with memory
 │   │   └── itinerary.js          # POST /api/itinerary/generate — AI itinerary builder
 │   ├── index.js                  # Server entry
-│   └── .env                      # Environment configuration
+│   ├── .env.example              # Template — copy to .env (not committed)
+│   └── .env                      # Local secrets (create yourself; gitignored)
 └── README.md
 ```
 
