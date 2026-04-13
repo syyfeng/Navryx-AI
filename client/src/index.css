@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-glass-hover: rgba(255, 255, 255, 0.08);
+  --color-accent: #c084fc;
+  --color-accent-dim: rgba(192, 132, 252, 0.15);
+  --color-accent-glow: rgba(192, 132, 252, 0.4);
+  --color-surface: #18181b;
+  --color-surface-elevated: #27272a;
+
+  --color-page: #09090b;
+  --color-panel: #09090b;
+  --color-ink: #ffffff;
+  --color-ink-secondary: #d4d4d8;
+  --color-ink-muted: #71717a;
+  --color-ink-faint: #52525b;
+  --color-divider: rgba(255, 255, 255, 0.05);
+  --color-tag: rgba(255, 255, 255, 0.05);
+  --color-tag-hover: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+/* ── Glass effect (adapts via CSS variables) ── */
+
+.glass {
+  background: var(--color-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--color-glass-border);
+}
+
+.glass-hover:hover {
+  background: var(--color-glass-hover);
+}
+
+.glow-marker {
+  box-shadow:
+    0 0 20px var(--color-accent-glow),
+    0 0 60px rgba(192, 132, 252, 0.2);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ── Light theme overrides ── */
+
+[data-theme="light"] {
+  --color-glass: rgba(255, 255, 255, 0.82);
+  --color-glass-border: rgba(0, 0, 0, 0.08);
+  --color-glass-hover: rgba(0, 0, 0, 0.04);
+  --color-accent: #9333ea;
+  --color-accent-dim: rgba(147, 51, 234, 0.1);
+  --color-accent-glow: rgba(147, 51, 234, 0.2);
+  --color-surface: #ffffff;
+  --color-surface-elevated: #f1f5f9;
+  --color-page: #fafafa;
+  --color-panel: #ffffff;
+  --color-ink: #1e293b;
+  --color-ink-secondary: #334155;
+  --color-ink-muted: #64748b;
+  --color-ink-faint: #94a3b8;
+  --color-divider: rgba(0, 0, 0, 0.08);
+  --color-tag: rgba(0, 0, 0, 0.05);
+  --color-tag-hover: rgba(0, 0, 0, 0.1);
+
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+}
+
+[data-theme="light"] .glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .glow-marker {
+  box-shadow: 0 2px 12px rgba(147, 51, 234, 0.18);
+}
