@@ -22,11 +22,11 @@ app.get("/api/health", (_req, res) => {
     process.env.OPENAI_API_KEY.trim() !== "";
   res.json({
     status: "ok",
-    service: "GastroGlobe API",
+    service: "Navryx AI API",
     aiProvider: hasOpenAI ? "openai" : "ollama",
   });
 });
 
 app.listen(PORT, () => {
-  console.log(`GastroGlobe server running on http://localhost:${PORT}`);
+  console.log(`Navryx AI server running on http://localhost:${PORT}`);
 });

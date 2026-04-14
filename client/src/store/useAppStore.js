@@ -5,7 +5,7 @@ import { getTopCities } from "../data/cities";
 
 function loadSettings() {
   try {
-    const raw = localStorage.getItem("gastroglobe-settings");
+    const raw = localStorage.getItem("navryx-ai-settings");
     return raw ? JSON.parse(raw) : {};
   } catch {
     return {};
@@ -14,7 +14,7 @@ function loadSettings() {
 
 function saveSettings(settings) {
   try {
-    localStorage.setItem("gastroglobe-settings", JSON.stringify(settings));
+    localStorage.setItem("navryx-ai-settings", JSON.stringify(settings));
   } catch { /* noop */ }
 }
 
@@ -24,7 +24,7 @@ const WELCOME_MESSAGE = {
   id: "1",
   role: "assistant",
   content:
-    "Welcome to GastroGlobe! I'm your AI Travel Concierge. Tell me — what kind of food experience are you craving, and I'll craft the perfect journey for you.",
+    "Welcome to Navryx AI! I'm your AI Travel Concierge. Tell me — what kind of food experience are you craving, and I'll craft the perfect journey for you.",
 };
 
 const savedSettings = loadSettings();

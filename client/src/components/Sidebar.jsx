@@ -18,10 +18,10 @@ export default function Sidebar() {
     <aside className={`flex h-full w-20 flex-col items-center border-r py-6 lg:w-64 ${t("border-white/5 bg-zinc-950", "border-slate-200 bg-white")}`}>
       <div className="mb-10 flex items-center gap-3 px-4">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-fuchsia-600 font-display text-lg font-bold text-white">
-          G
+          N
         </div>
         <span className={`hidden font-display text-lg font-semibold tracking-tight lg:block ${t("text-white", "text-slate-800")}`}>
-          GastroGlobe
+          Navryx AI
         </span>
       </div>
 

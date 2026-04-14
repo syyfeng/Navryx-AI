@@ -81,7 +81,7 @@ export default function SettingsPage() {
         <div className="mb-8">
           <h1 className={`font-display text-3xl font-bold ${t("text-white", "text-slate-800")}`}>Settings</h1>
           <p className={`mt-1 text-sm ${t("text-zinc-500", "text-slate-500")}`}>
-            Personalize your GastroGlobe experience
+            Personalize your Navryx AI experience
           </p>
         </div>
 
@@ -221,7 +221,7 @@ export default function SettingsPage() {
             </div>
             <p className={`mt-2 text-[11px] ${t("text-zinc-600", "text-slate-400")}`}>
               {settings.theme === "dark"
-                ? "Neon glassmorphism — the classic GastroGlobe look"
+                ? "Neon glassmorphism — the classic Navryx AI look"
                 : "Luxury travel magazine — cream backgrounds with soft shadows"}
             </p>
           </Section>

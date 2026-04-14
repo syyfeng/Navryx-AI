@@ -1,4 +1,4 @@
-# GastroGlobe
+# Navryx AI
 
 A luxury travel & food recommendation web app built with the MERN stack — featuring an interactive 3D globe, a weighted city recommendation engine, AI-powered travel concierge, personalized foodie itinerary generation, and a dual Dark/Light theme system.
 
@@ -36,7 +36,7 @@ ollama serve
 ollama pull llama3.2
 ```
 
-Ollama runs at `http://localhost:11434` by default. GastroGlobe will auto-detect and use it when no OpenAI API key is configured.
+Ollama runs at `http://localhost:11434` by default. Navryx AI will auto-detect and use it when no OpenAI API key is configured.
 
 ### Install & Run
 
@@ -70,14 +70,14 @@ cd client && npm run dev           # → http://localhost:5173
 | `OPENAI_MODEL` | `gpt-4o-mini` | OpenAI model to use |
 | `OLLAMA_URL` | `http://localhost:11434` | Ollama server URL |
 | `OLLAMA_MODEL` | `llama3.2` | Ollama model to use |
-| `MONGODB_URI` | `mongodb://localhost:27017/gastroglobe` | MongoDB connection string |
+| `MONGODB_URI` | `mongodb://localhost:27017/navryxai` | MongoDB connection string |
 
 You can also set the OpenAI API key and toggle Ollama directly in the app's **Settings** page — those values are stored in the browser and sent with each request.
 
 ## Project Structure
 
 ```
-GastroGlobe/
+Navryx-AI/
 ├── client/                       # React (Vite) frontend
 │   ├── public/                   # Static assets (globe textures, GeoJSON)
 │   ├── src/
@@ -115,6 +115,8 @@ GastroGlobe/
 ## Features
 
 ### Explore Tab — 3D Globe & Smart Recommendations
+
+![Explore tab — 3D globe and Discover panel](docs/images/explore-tab.png)
 
 Interactive 3D globe with NASA Blue Marble texture, toggleable country borders (constant-width 3D lines), and billboard labels. The globe adapts to the active theme — dark space background with stars in Dark Mode, bright sky-toned lighting in Light Mode.
 
@@ -196,5 +198,5 @@ The theme is stored in localStorage and applies instantly via CSS custom propert
 - Ensure `client/public/earth-blue-marble.jpg` and `client/public/countries-110m.json` exist
 
 **Theme not applying**
-- Clear localStorage: open DevTools → Application → Local Storage → delete `gastroglobe-settings`
+- Clear localStorage: open DevTools → Application → Local Storage → delete `navryx-ai-settings`
 - Refresh the page — the default Dark Mode will apply
