@@ -139,10 +139,10 @@ The engine scores all 50 cities in the database, sorts by total score, and retur
 Chat with an AI Travel Concierge powered by OpenAI or local Ollama. Full conversation memory within the session.
 
 **Dual-Pane Layout:**
-- **Left pane:** Chat interface with structured UI cards (Flight, Hotel, Transit recommendations) rendered inline. Each card has an **"Add to Itinerary"** button that instantly updates the live canvas.
+- **Left pane:** Chat interface with structured UI (Flight, Hotel, Transit recommendations) rendered inline. 
 - **Right pane:** Scrollable Live Itinerary Canvas showing the working itinerary with per-activity **"Remove"** buttons for real-time editing.
 
-The AI receives itinerary context and can suggest logistics, swap restaurants, and optimize for budget or reward points.
+The AI receives itinerary context, suggest logistics and optimize for budget or reward points.
 
 ### Itinerary Tab — Foodie-Focused Trip Builder
 
