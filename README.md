@@ -181,22 +181,3 @@ The theme is stored in localStorage and applies instantly via CSS custom propert
 | `POST` | `/api/chat` | Send conversation history, get AI response (with optional itinerary context) |
 | `POST` | `/api/itinerary/generate` | Generate a foodie itinerary from parameters |
 | `GET` | `/api/health` | Health check + current AI provider status |
-
-## Troubleshooting
-
-**"Network error. Make sure the server is running."**
-- Ensure the backend is started: `cd server && node index.js`
-- Check it's listening on port 3001: visit `http://localhost:3001/api/health`
-
-**AI replies with "I'm having trouble connecting to the AI service"**
-- If using OpenAI: verify your API key is valid in Settings
-- If using Ollama: make sure `ollama serve` is running and `llama3.2` is pulled
-- Check the server terminal for detailed error messages
-
-**Globe not loading / white screen**
-- Hard-refresh the browser (`Cmd+Shift+R`)
-- Ensure `client/public/earth-blue-marble.jpg` and `client/public/countries-110m.json` exist
-
-**Theme not applying**
-- Clear localStorage: open DevTools → Application → Local Storage → delete `navryx-ai-settings`
-- Refresh the page — the default Dark Mode will apply
